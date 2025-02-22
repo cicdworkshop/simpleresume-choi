@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+
 jobs:
   pr-workflow:
     name: PR Workflow
