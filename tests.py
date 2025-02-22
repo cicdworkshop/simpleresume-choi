@@ -17,6 +17,12 @@ class TestUser(unittest.TestCase):
             {"start_date": "2018-01-01"},
             {"start_date": "2019-01-01"}                   
         ]
+        self.user.certifications = [
+            {"date": "2016-01-01"},
+            {"date": "2017-01-01"},
+            {"date": "2018-01-01"},
+            {"date": "2019-01-01"}                   
+        ]
 
 
     def test_sort_user_experience(self):
@@ -35,16 +41,7 @@ class TestUser(unittest.TestCase):
     # (FOR WORKSHOP)
     # Implement the unit test for the function that you just created to sort the certifications.
     # Use the same logic as the test function above
-    def setUp(self):
-        """Initialization of user object.
-        """
-        self.user = User()
-        self.user.certifications = [
-            {"date": "2016-01-01"},
-            {"date": "2017-01-01"},
-            {"date": "2018-01-01"},
-            {"date": "2019-01-01"}                   
-        ]
+    
 
     def test_sort_user_certification(self):
         """Test function: sort_user_certification
