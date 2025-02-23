@@ -1,6 +1,7 @@
 """This file is the module to get users data from database. But, for the purpose of the workshop, it reads the users
 data from the dummy file.
 """
+import os
 import yaml
 
 
@@ -40,7 +41,7 @@ def load_dummy_users() -> list:
     Returns:
         dummy_users: List of user object.
     """
-    filename = "dummy_users.yaml"
+    filename = os.getcwd() + "/dummy_users.yaml"
     dummy_users = yaml.load(open(filename), Loader=yaml.FullLoader)
     users = []
     for user_id, user_data in dummy_users.items():
